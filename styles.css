@@ -1,0 +1,125 @@
+/* 
+   Hoja de Estilos Independiente 
+   Aquí aplicamos los conceptos solicitados.
+*/
+
+/* 1. Fuentes y Herencia */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente base heredada */
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+/* 2. Selectores Básicos */
+/* Selector de etiqueta */
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* Selector de clase */
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Sobrescribiendo herencia de fuente */
+.custom-font {
+    font-family: 'Courier New', Courier, monospace;
+    color: #e74c3c;
+}
+
+/* 3. Box Model y Box Sizing */
+.box {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid #3498db;
+    margin-bottom: 20px;
+    background-color: #fff;
+}
+
+/* box-sizing: content-box (por defecto) 
+   Ancho total = 300px + 40px (padding) + 10px (border) = 350px
+*/
+.content-box {
+    box-sizing: content-box; 
+}
+
+/* box-sizing: border-box 
+   Ancho total = 300px (el padding y border se comen espacio del contenido)
+*/
+.border-box {
+    box-sizing: border-box;
+    border-color: #27ae60;
+}
+
+/* 4. Display */
+.inline-element {
+    display: inline; /* Solo ocupa el espacio necesario, no acepta ancho/alto */
+    background-color: #f1c40f;
+    padding: 5px;
+    margin: 5px;
+}
+
+.block-element {
+    display: block; /* Ocupa todo el ancho disponible, salta de línea */
+    background-color: #9b59b6;
+    color: white;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.inline-block-element {
+    display: inline-block; /* Se comporta como texto pero acepta ancho/alto/padding */
+    background-color: #e67e22;
+    color: white;
+    padding: 10px;
+    width: 150px;
+    margin: 5px;
+    text-align: center;
+}
+
+/* 5. Hover (Pseudoclase) */
+.hover-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #34495e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.hover-btn:hover {
+    background-color: #1abc9c; /* Cambia de color al pasar el mouse */
+    transform: scale(1.05);
+}
+
+/* 6. Especificidad */
+/* Especificidad: 0, 0, 1 (Etiqueta p) */
+p {
+    color: #333; 
+}
+
+/* Especificidad: 0, 1, 0 (Clase .text-primary) - Ganaría a la etiqueta p */
+.text-primary {
+    color: blue;
+}
+
+/* Especificidad: 1, 0, 0 (ID #unique-text) - Gana a la clase y etiqueta */
+#unique-text {
+    color: #d35400; /* Este color se aplicará */
+    font-weight: bold;
+    background-color: #fff;
+    padding: 10px;
+    border-left: 5px solid #d35400;
+}
