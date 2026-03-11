@@ -93,6 +93,38 @@
                 (ID > Clase > Etiqueta)
             </p>
         </section>
+
+        <section id="flexbox-alignment-section">
+            <h2>Flexbox: Alinear y Centrar</h2>
+
+            <h3>Centrado (justify-content + align-items)</h3>
+            <div class="flex-center-demo">
+                <div class="flex-center-box">Centrado</div>
+            </div>
+
+            <h3>Alineación multi-línea (flex-wrap + align-content)</h3>
+            <div class="flex-multiline-demo">
+                <div class="flex-pill">1</div>
+                <div class="flex-pill">2</div>
+                <div class="flex-pill">3</div>
+                <div class="flex-pill">4</div>
+                <div class="flex-pill">5</div>
+                <div class="flex-pill">6</div>
+                <div class="flex-pill">7</div>
+                <div class="flex-pill">8</div>
+                <div class="flex-pill">9</div>
+                <div class="flex-pill">10</div>
+            </div>
+
+            <h3>Alineación específica por elemento (align-self, margin-left:auto, order)</h3>
+            <div class="flex-specific-demo">
+                <div class="flex-specific-item">A</div>
+                <div class="flex-specific-item flex-specific-item--self-start">B (self-start)</div>
+                <div class="flex-specific-item flex-specific-item--self-end">C (self-end)</div>
+                <div class="flex-specific-item flex-specific-item--push-right">D (a la derecha)</div>
+                <div class="flex-specific-item flex-specific-item--first">E (order:-1)</div>
+            </div>
+        </section>
     </main>
 
     <footer>
