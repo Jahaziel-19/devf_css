@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="navbar__brand">CSS Demo</div>
+        <ul class="navbar__links">
+            <li><a href="#flexbox-section">Flexbox</a></li>
+            <li><a href="#position-section">Position</a></li>
+            <li><a href="#specificity-section">Especificidad</a></li>
+            <li><a href="#flexbox-card-section">Card + Media</a></li>
+            <li><a href="#zindex-section">z-index</a></li>
+        </ul>
+    </nav>
+
     <header class="main-header">
         <h1>Conceptos Básicos de CSS</h1>
         <p>Este proyecto demuestra conceptos fundamentales de CSS.</p>
@@ -125,10 +136,59 @@
                 <div class="flex-specific-item flex-specific-item--first">E (order:-1)</div>
             </div>
         </section>
+
+        <section id="flexbox-card-section">
+            <h2>Flexbox: Navbar, Footer, Card y Media Queries</h2>
+            <p>La navbar y el footer de esta página están hechos con Flexbox.</p>
+
+            <h3>Tarjeta responsive (gap + flex-direction)</h3>
+            <p>La propiedad gap crea espacio entre la imagen y el contenido sin márgenes extra. Con media queries, la tarjeta cambia de fila a columna en pantallas pequeñas.</p>
+            <article class="card">
+                <div class="card__media" aria-hidden="true"></div>
+                <div class="card__content">
+                    <h4 class="card__title">Tarjeta con Flexbox</h4>
+                    <p class="card__text">En desktop, imagen y texto van en fila. En móvil, se apilan en columna para mejorar la lectura.</p>
+                    <div class="card__actions">
+                        <a class="card__link" href="#flexbox-alignment-section">Ver alineación</a>
+                        <a class="card__link card__link--secondary" href="#position-section">Ver position</a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <section id="zindex-section">
+            <h2>Position + z-index</h2>
+            <p>Estos elementos se traslapan. El que tiene mayor z-index queda encima.</p>
+            <div class="z-stage">
+                <div class="z-card z-card--one">z-index: 1</div>
+                <div class="z-card z-card--two">z-index: 2</div>
+                <div class="z-card z-card--three">z-index: 3</div>
+            </div>
+        </section>
     </main>
 
-    <footer>
-        
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__col">
+                <div class="site-footer__title">Footer (Flexbox)</div>
+                <p class="site-footer__text">En pantallas pequeñas, las columnas se acomodan con media queries.</p>
+            </div>
+            <div class="site-footer__col">
+                <div class="site-footer__title">Secciones</div>
+                <ul class="site-footer__links">
+                    <li><a href="#flexbox-section">Flexbox</a></li>
+                    <li><a href="#position-section">Position</a></li>
+                    <li><a href="#zindex-section">z-index</a></li>
+                </ul>
+            </div>
+            <div class="site-footer__col">
+                <div class="site-footer__title">Contacto</div>
+                <ul class="site-footer__links">
+                    <li><a href="#typography-section">Ir al inicio</a></li>
+                    <li><a href="#specificity-section">Especificidad</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

@@ -9,8 +9,14 @@ body {
     line-height: 1.6;
     color: #333;
     margin: 0;
-    padding: 20px;
+    padding: 0;
     background-color: #f4f4f4;
+}
+
+main {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 0 20px 40px;
 }
 
 /* 2. Selectores Básicos */
@@ -21,8 +27,9 @@ h1, h2, h3 {
 
 /* Selector de clase */
 .main-header {
+    max-width: 980px;
     text-align: center;
-    margin-bottom: 40px;
+    margin: 20px auto 40px;
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
@@ -228,6 +235,47 @@ p {
     z-index: 9999;
 }
 
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.navbar__brand {
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+.navbar__links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+.navbar__links a {
+    display: inline-block;
+    padding: 8px 10px;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.navbar__links a:hover {
+    background-color: rgba(255, 255, 255, 0.14);
+}
+
 .flex-center-demo {
     display: flex;
     justify-content: center;
@@ -312,4 +360,185 @@ p {
     order: -1;
     background-color: #fce4ec;
     border-color: #e91e63;
+}
+
+.card {
+    display: flex;
+    gap: 16px;
+    align-items: stretch;
+    padding: 14px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+}
+
+.card__media {
+    flex: 0 0 220px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #3498db, #1abc9c);
+    min-height: 140px;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0;
+}
+
+.card__title {
+    margin: 0;
+}
+
+.card__text {
+    margin: 0;
+}
+
+.card__actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: auto;
+}
+
+.card__link {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.card__link:hover {
+    background-color: #1abc9c;
+}
+
+.card__link--secondary {
+    background-color: #34495e;
+}
+
+.z-stage {
+    position: relative;
+    height: 210px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 2px dashed #bdc3c7;
+    overflow: hidden;
+}
+
+.z-card {
+    position: absolute;
+    width: 180px;
+    height: 110px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #fff;
+    box-shadow: 0 14px 30px rgba(0,0,0,0.25);
+}
+
+.z-card--one {
+    top: 30px;
+    left: 24px;
+    background-color: rgba(52, 152, 219, 0.9);
+    z-index: 1;
+}
+
+.z-card--two {
+    top: 55px;
+    left: 90px;
+    background-color: rgba(155, 89, 182, 0.9);
+    z-index: 2;
+}
+
+.z-card--three {
+    top: 85px;
+    left: 160px;
+    background-color: rgba(231, 76, 60, 0.9);
+    z-index: 3;
+}
+
+.site-footer {
+    margin-top: 40px;
+    background-color: #fff;
+    border-top: 1px solid #e8e8e8;
+}
+
+.site-footer__inner {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 24px 20px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.site-footer__col {
+    flex: 1 1 220px;
+    min-width: 220px;
+}
+
+.site-footer__title {
+    font-weight: 800;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.site-footer__text {
+    margin: 0;
+    color: #555;
+}
+
+.site-footer__links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.site-footer__links a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.site-footer__links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    main {
+        padding: 0 14px 32px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .navbar__links {
+        justify-content: center;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .card__media {
+        flex-basis: auto;
+        width: 100%;
+        min-height: 160px;
+    }
+
+    .site-footer__inner {
+        flex-direction: column;
+    }
 }
