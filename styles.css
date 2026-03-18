@@ -45,6 +45,7 @@ h1, h2, h3 {
 /* 3. Box Model y Box Sizing */
 .box {
     width: 300px;
+    max-width: 100%;
     padding: 20px;
     border: 5px solid #3498db;
     margin-bottom: 20px;
@@ -90,6 +91,7 @@ h1, h2, h3 {
     width: 150px;
     margin: 5px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 /* 5. Hover (Pseudoclase) */
@@ -171,11 +173,13 @@ p {
 
 .pos-box {
     width: 220px;
+    max-width: 100%;
     padding: 12px;
     border-radius: 8px;
     border: 2px solid #2c3e50;
     background-color: #ecf0f1;
     font-weight: 600;
+    box-sizing: border-box;
 }
 
 .pos-box--static {
@@ -326,6 +330,7 @@ p {
     background-color: #fff;
     border-radius: 8px;
     border: 2px dashed #bdc3c7;
+    flex-wrap: wrap;
 }
 
 .flex-specific-item {
@@ -519,6 +524,15 @@ p {
         padding: 0 14px 32px;
     }
 
+    h1 {
+        font-size: 26px;
+        margin: 0 0 8px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
     .navbar {
         flex-direction: column;
         align-items: stretch;
@@ -526,6 +540,25 @@ p {
 
     .navbar__links {
         justify-content: center;
+    }
+
+    .inline-block-element {
+        width: 100%;
+    }
+
+    .position-stage {
+        height: 320px;
+    }
+
+    .pos-box--absolute {
+        top: 148px;
+        left: 12px;
+        right: auto;
+    }
+
+    .flex-specific-demo {
+        height: auto;
+        align-items: flex-start;
     }
 
     .card {
@@ -540,5 +573,43 @@ p {
 
     .site-footer__inner {
         flex-direction: column;
+    }
+
+    .fixed-badge {
+        right: 12px;
+        bottom: 12px;
+        padding: 8px 10px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar__links a {
+        padding: 8px 8px;
+    }
+
+    .flex-pill {
+        flex-basis: 72px;
+    }
+
+    .z-stage {
+        height: 240px;
+    }
+
+    .z-card {
+        width: 150px;
+        height: 96px;
+    }
+
+    .z-card--one {
+        left: 14px;
+    }
+
+    .z-card--two {
+        left: 60px;
+    }
+
+    .z-card--three {
+        left: 106px;
     }
 }
